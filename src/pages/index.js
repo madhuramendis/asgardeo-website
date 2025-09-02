@@ -128,6 +128,7 @@ return (
                                                         }}
 
                                                         variant="primary" className="me-2 btnstyle1 text-white glow-button-wrapper">Start building for FREE</motion.Button>
+
                                         </Col>
 
                                         <Col sm={12} md={6}>
@@ -486,7 +487,7 @@ return (
                                 <Row className='midsectionpad lastpad'>
                                         <Col sm={12} md={12} lg={12} className='flexitem'>
 
-                                                <Col sm={12} md={3} lg={3}>
+                                                <Col sm={12} md={12} lg={3}>
 
                                                         <motion.div 
                                                         initial={{ opacity:0 }}
@@ -521,7 +522,7 @@ return (
 
                                                 </Col>
 
-                                                <Col sm={12} md={3} lg={3}>
+                                                <Col sm={12} md={12} lg={3}>
 
                                                         <motion.div 
                                                         initial={{ opacity:0 }}
@@ -556,7 +557,7 @@ return (
                                                 </Col>
 
 
-                                                <Col sm={12} md={3} lg={3}>
+                                                <Col sm={12} md={12} lg={3}>
 
                                                         <motion.div 
                                                         
@@ -592,7 +593,7 @@ return (
 
                                                 </Col>
 
-                                                <Col sm={12} md={3} lg={3}>
+                                                <Col sm={12} md={12} lg={3}>
                                                         
                                                         <motion.div  
                                                         initial={{ opacity:0 }}
@@ -603,7 +604,7 @@ return (
                                                                
                                                                 
                                                         }}
-                                                        className="bladecards">
+                                                        className="bladecards lastcardmob">
                                                                 <motion.div
                                                                 initial={{ rotate: 0 }}
                                                                 animate={{ rotate: 0 }}

@@ -270,6 +270,7 @@ p{
   padding: 20x 10px !important;
   font-size: 18px !important;
   padding: 10px !important;
+  height: 48px;
 }
 
 
@@ -509,7 +510,6 @@ h5{
 
 .cardtitles2{
   margin-top: 10px;
-  min-width: 260px;
   font-weight: 400 !important;
 }
 
@@ -537,7 +537,7 @@ img {
 .blacknav{
   background-color: #000000 !important;
   color: #fff !important;
-  padding: 1rem 8rem !important;
+  padding: 1rem 0rem !important;
 }
 
 .nav-link{
@@ -570,6 +570,7 @@ img {
   justify-content: center;
   gap: 3.7rem;
   margin-top: 3rem;
+  flex-wrap: wrap;
 }
 
 
@@ -582,7 +583,7 @@ img {
 
 .flexitem{
   display: flex;
-  /* gap: 2rem; */
+  
 }
 
 
@@ -600,7 +601,7 @@ img {
   align-items: center;
   transition: transform 0.5s ease, opacity 0.5s ease;
   border: 0.5px solid #ffffff18 !important;
-  margin-left: 2rem;
+  margin: 0rem 1rem;
   min-height: 264px;
   animation: float 10s ease-in-out infinite;
 }
@@ -619,6 +620,98 @@ img {
 
 
 
+/* ------foooter----- */
+
+.footerflex{
+  display: flex;
+  padding: 3rem 1rem;
+  border-top: 2px solid !important;
+  border-bottom: 2px solid !important;
+  border-image: linear-gradient(to right, transparent, #8b8b8b42,#8b8b8b42, transparent) 1 !important;
+}
+
+
+.footerp{
+  padding: 0 !important;
+  font-size: 15px !important;
+  color: #ccc !important;
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  padding-right: 12rem !important;
+  
+}
+
+.footerpsmall{
+  padding: 0 !important;
+  font-size: 13px !important;
+  color: #ccc !important;
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  font-weight: 200;
+  padding-right: 12rem !important;
+  
+}
+
+
+.copyright{
+  padding: 0 !important;
+  font-size: 13px !important;
+  color: #ccc !important;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 1opx;
+  margin-bottom: 0px;
+  font-weight: 200;
+  
+  
+}
+
+.linktitle{
+  padding: 0 !important;
+  font-size: 17px !important;
+  color: #ffffff !important;
+  text-align: left;
+  margin-bottom: 20px;
+  padding-right: 12rem !important;
+  margin-left: 2rem;
+}
+
+
+.linksfooter{
+  padding: 0 !important;
+  font-size: 14px !important;
+  color: #ccc !important;
+  text-align: left;
+  margin-bottom: 2px;
+  text-decoration: none !important;
+  margin-left: 2rem;
+}
+
+.linksfooter:hover{
+  color: #ffffff !important;
+}
+
+.footerpsmall:hover{
+  color: #ffffff !important;
+
+}
+
+a{
+  text-decoration: none !important;
+}
+
+.flexend{
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+
+
+
+
 @media (max-width: 1400px) {
 
 
@@ -631,7 +724,9 @@ img {
     padding: 0rem 15rem;
   }
 
-
+.bladecards{
+  min-height: 305px;
+}
 
 }
 
@@ -663,9 +758,61 @@ img {
   padding: 0rem 3rem;
   }
 
+  .bladecards{
+    min-height: auto;
+  }
+
   p{
     padding: 0rem 0rem;
   }
+
+  .cardp2{
+    min-height: 2rem;
+  }
+
+  .footerflex{
+    display: grid;
+  }
+
+  .linktitle{
+    margin-left: 0 !important;
+    margin-top: 1rem;
+  }
+
+  .linksfooter{
+    margin-left: 0 !important;
+  }
+
+  .flexend{
+    justify-content: flex-start !important;
+    margin-top: 2rem;
+  }
+
+  .bladecards{
+    margin-bottom: 2rem;
+  }
+
+  .flexitem{
+    display: block;
+
+  }
+
+  .lastcardmob{
+    margin-bottom: 0 !important;
+  }
+
+
+  .footerp{
+    padding-right: 0rem !important;
+    
+  }
+  
+  .footerpsmall{
+    padding-right: 0rem !important;
+    
+  }
+
+
 
 
 }
@@ -687,5 +834,43 @@ img {
     display: none;
   }
 
+  .secsection{
+    display: none;
+  }
+
 
 }
+
+
+
+@media (max-width: 576px) {
+
+
+  .container{
+    max-width: 400px !important;
+  }
+
+
+}
+
+@media (max-width: 400px) {
+
+
+  .container{
+    max-width: 340px !important;
+  }
+
+  .btncenter {
+    padding: 0rem 0rem;
+  }
+  .me-2 {
+    margin-right: 0rem !important;
+  }
+
+
+}
+
+
+
+/* ----- */
+
