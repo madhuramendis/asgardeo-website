@@ -127,7 +127,12 @@ return (
                                                                 transition: { duration: 0.1 }
                                                         }}
 
-                                                        variant="primary" className="me-2 btnstyle1 text-white glow-button-wrapper">Start building for FREE</motion.Button>
+                                                        variant="primary" className="me-2 btnstyle1 animationbtn2 text-white glow-button-wrapper">
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        Start building for FREE</motion.Button>
 
                                         </Col>
 
@@ -141,7 +146,14 @@ return (
                                                                 boxShadow: "0px 5px 15px rgba(255, 255, 255, 0.3)",
                                                                 transition: { duration: 0.1 }
                                                         }}
-                                                        variant="secondary" className='btnstyle2 mobilebtn text-white glow-button-wrapper-second'>Build with your AI Helper</motion.Button>
+                                                        variant="secondary" className='btnstyle2 animationbtn2 mobilebtn text-white glow-button-wrapper-second'>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                                
+                                                        Build with your AI Helper</motion.Button>
+
                                         </Col>
 
                                 </Row>
@@ -497,7 +509,11 @@ return (
                                                                 transition: { duration: 0.5 },
                                                                 
                                                         }}
-                                                        className="bladecards">
+                                                        className="bladecards animationbtn2">
+                                                                <span></span>
+                                                                <span></span>
+                                                                <span></span>
+                                                                <span></span>
                                                                 <motion.div
 
                                                                 initial={{ rotate: 0 }}
@@ -532,7 +548,11 @@ return (
                                                                 transition: { duration: 0.5 },
                                                                
                                                         }}
-                                                        className="bladecards">
+                                                        className="bladecards animationbtn2">
+                                                                <span></span>
+                                                                <span></span>
+                                                                <span></span>
+                                                                <span></span>
                                                                 <motion.div
                                                                 initial={{ rotate: 0 }}
                                                                 animate={{ rotate: 0 }}
@@ -568,7 +588,11 @@ return (
                                                                 transition: { duration: 0.5 },
                                                                 
                                                         }}
-                                                        className="bladecards">
+                                                        className="bladecards animationbtn2">
+                                                                <span></span>
+                                                                <span></span>
+                                                                <span></span>
+                                                                <span></span>
                                                                 <motion.div
                                                                 initial={{ rotate: 0 }}
                                                                 animate={{ rotate: 0 }}
@@ -604,7 +628,12 @@ return (
                                                                
                                                                 
                                                         }}
-                                                        className="bladecards lastcardmob">
+                                                        className="bladecards lastcardmob animationbtn2">
+                                                                <span></span>
+                                                                <span></span>
+                                                                <span></span>
+                                                                <span></span>
+
                                                                 <motion.div
                                                                 initial={{ rotate: 0 }}
                                                                 animate={{ rotate: 0 }}
@@ -620,7 +649,8 @@ return (
 
                                                                 </motion.div>
 
-                                                                <h5 className='cardtitles2'>Standards You Trust</h5>
+                                                                <h5
+                                                                 className='cardtitles2'>Standards You Trust</h5>
                                                                 <p class="cardp2">OAuth 2.1, OpenID Connect, SAML 2.0 and SCIM 2.0</p>
                                                         </motion.div>
                                                 </Col>
