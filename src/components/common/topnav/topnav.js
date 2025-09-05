@@ -7,11 +7,21 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { useState, useEffect } from "react";
 import { delay, motion, scale } from "framer-motion";
 
 
 
 const TopNav = () => {
+
+  // 1️⃣ Theme State
+  const [theme, setTheme] = useState("light");
+
+  // 2️⃣ Apply theme to body whenever it changes
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
+
     return (
         <>
 
@@ -23,7 +33,7 @@ const TopNav = () => {
           <img
             src="https://wso2.cachefly.net/wso2/sites/all/image_resources/asgardeo-by-wso2-white.webp"
             alt="Asgardeo Logo"
-            className="ls-is-cached lazyloaded"
+            className="ls-is-cached lazyloaded theme-aslogo"
             loading="lazy"
             style={{ height: '38px', width: '140px' }}
           />
@@ -96,11 +106,27 @@ const TopNav = () => {
             Contact
             </Nav.Link>
 
+
+            <div style={{display: "flex", justifyContent: "flex-end", paddingRight:"2rem", margin: "auto",}}>
+                <motion.button
+                initial={{ rotate: 0 }}
+                animate={{ rotate: 0 }}
+                transition={{ delay: 0.2, duration: 0.5, ease: "easeInOut" }}
+                whileHover={{
+                transition: { duration: 0.5 },
+                rotate: 43,
+                }}
+                onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+                className="dnlbtn theme-toggle-btn"
+                >
+                </motion.button>
+                </div>
+
             <Nav.Link href="https://console.choreo.dev/?visitor_id=645a09031d3023.48602168&utm_source=site&utm_medium=organic" className='liginbtn' id="login" target="_blank" aria-label="Asgardeo login">
             Login / Register
             </Nav.Link>
            
-           
+            
            
      
            
@@ -119,8 +145,6 @@ const TopNav = () => {
     )
 }
 export default TopNav;
-
-
 
 
 

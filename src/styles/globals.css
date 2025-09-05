@@ -188,33 +188,291 @@
 	margin-top: var(--bs-gutter-y);
 }
 
-body {
-  /* font-family: "Plus Jakarta Sans", sans-serif !important;
-  background: linear-gradient(27deg, #232323, #000000) !important;
-  color: #fff;
-  background-image: url('https://wso2.cachefly.net/wso2/sites/all/image_resources/trifacta-sketch-v2.webp');
-   */
+
+
+/* Default Light Theme */
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+  /* background: linear-gradient(
+    180deg,      
+    rgb(30, 11, 1) 0%,   
+    rgba(0, 0, 0, 1) 100%  
+  ); */
   
+}
+
+body.dark h1{
+  color: #000000 !important;
+}
+
+body.dark h2{
+  color: #000000 !important;
+}
+
+body.dark p{
+  color: #1C1C1C !important;
+}
+
+body.dark .iconcontaniner{
+  filter: invert(1);
+}
+
+body.dark .cardtitles{
+  color: #000 !important;
+}
+
+body.dark .cardtitles2{
+  color: #000 !important;
+}
+
+body.dark .cardp2{
+  color: #1C1C1C !important;
+}
+
+body.dark .cardimgs{
+  filter: invert(1);
+}
+
+body.dark .btnstyle2{
+  background-color: #000 !important;;
+}
+
+body.dark .cardtitles{
+  color: #000 !important;
+}
+
+body.dark .cardtitles2{
+  color: #000 !important;
+}
+
+body.dark .cardp2{
+  color: #1C1C1C !important;
+}
+
+body.dark .cardimgs{
+  filter: invert(1);
+}
+
+body.dark .card button{
+  color: #000 !important;
+}
+body.dark .cardp{
+  color: #1C1C1C !important;
+}
+
+body.dark .card input{
+  color: #000 !important;
+  border: 0.5px solid #93939384;
+  background: rgba(89, 89, 89, 0.1);
+}
+
+
+
+
+
+body.dark .divider {
+  color: #000 !important;
+}
+
+body.dark .card a{
+  color: #4f4f4f;
+}
+
+body.dark .footerp{
+  color: #1C1C1C !important;
+}
+
+body.dark .footerpsmall{
+  color: #1C1C1C !important;
+}
+
+body.dark .footerpsmall:hover{
+  color: #4f4f4f !important;
+}
+
+body.dark .linktitle{
+  color: #000 !important;
+}
+
+body.dark .linksfooter{
+  color: #1C1C1C !important;
+}
+
+body.dark .linksfooter:hover{
+  color: #4f4f4f !important;
+}
+
+body.dark .animationbtn2:hover span:nth-child(1){
+  background:linear-gradient(to right,#7f4f4f0f,#ffffff);
+}
+
+body.dark .animationbtn2:hover span:nth-child(3){
+  background:linear-gradient(to left,#7f4f4f0f,#ffffff);
+  
+}
+
+body.dark .footerflex{
+  border-image: linear-gradient(to right, transparent, #00000030,#00000030, transparent) 1 !important;
+}
+
+body.dark .copyright{
+  color: #1C1C1C !important;
+}
+
+body.dark .card{
+  box-shadow: 0 10px 22px rgba(126, 126, 126, 0.31);
+  background-color: #fff !important;
+}
+
+body.dark .bladecards{
+  box-shadow: 0 10px 22px rgba(126, 126, 126, 0.31);
+  background-color: #fff !important;
+}
+
+body.dark .blacknav{
+  /* background-color: #fff !important; */
+  backdrop-filter: blur(25px) !important;
+}
+body.dark .nav-link{
+  color: #000 !important;
+}
+
+body.dark .btnstyle2{
+  background-color: #000 !important;;
+}
+
+body.dark .liginbtn{
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+body.dark .theme-aslogo {
+  content: url('https://wso2.cachefly.net/wso2/sites/all/image_resources/asgadeo-logo-by-wso2.webp');
+  
+}
+
+body.dark .theme-minaslogo {
+  content: url('https://wso2.cachefly.net/wso2/sites/all/image_resources/asgardeo-whitemode.webp');
+  
+}
+
+body.dark .highlightspn{
+  border: 1px solid #000000;
+}
+
+body.dark .cardpsecond{
+  color: #1C1C1C !important;
+}
+
+body.dark .divider::before,
+body.dark .divider::after {
+
+border-bottom: 1px solid #000000; /* line color */
+}
+
+
+
+
+
+
+
+/* Dark Theme */
+body.light {
+  background-color: #000000;
+  color: #ffffff;
+  
+}
+
+
+
+
+body {
    position: relative;
    display: flex;
    align-items: center;
    justify-content: center;
-   color: white;
-   background-color: #000000 !important;
    background-image: 
-     url('https://wso2.cachefly.net/wso2/sites/all/image_resources/trifacta-sketch-v2.webp'); /* replace with your image path */
+     url('https://wso2.cachefly.net/wso2/sites/all/image_resources/trifacta-sketch-v2.webp'); 
    background-size: 814px !important;
    background-position: calc(50% - 0px) calc(41% - 173px) !important; 
    background-repeat: no-repeat;
+   z-index: -1;
+   
+  
+   
   
 
+}
+
+
+/* body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://wso2.cachefly.net/wso2/sites/all/image_resources/trifacta-sketch-v2.webp');
+  background-size: 814px !important;
+  background-position: calc(50% - 0px) calc(41% - 173px) !important;
+  background-repeat: no-repeat;
+  opacity: 0.6; 
+  z-index: -1;
+  pointer-events: none;
+} */
+
+
+.dnlbtn{
+  font-size: 12px !important;
+  line-height: 5px !important;
+  height: 25px;
+  
+  border-radius: 50%;
+  font-size: 40px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-toggle-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000000;
+  border: 1px solid #2f2f2f;
+}
+
+/* Light mode = show moon icon */
+body.light .theme-toggle-btn {
+  background-image: url("https://wso2.cachefly.net/wso2/sites/all/image_resources/lightmode.webp");
+}
+
+/* Dark mode = show sun icon */
+body.dark .theme-toggle-btn {
+  background-image: url("https://wso2.cachefly.net/wso2/sites/all/image_resources/darkmode.webp");
 }
 
 
 h1{
   text-align: center;
   margin-bottom: 2rem !important;
-  color: #fff;
+  color: #fff !important;
   font-weight: 700;
   font-size: 62px !important;
 }
@@ -222,7 +480,7 @@ h1{
 h2{
   text-align: center;
   margin-bottom: 2rem !important;
-  color: #fff; 
+  color: #fff !important; 
 }
 
 .midsectionpad{
@@ -359,7 +617,7 @@ h5{
   height: 100%;
   padding: 30px;
   border-radius: 15px !important;
-  background-color: #5050503f !important;
+  background-color: #3131313d !important;
   box-shadow: 0 8px 32px rgba(0,0,0,0.7);
   backdrop-filter: blur(10px) !important;
   border: 1px solid rgba(255,255,255,0.1);
@@ -374,8 +632,8 @@ h5{
 
 .card:nth-child(1) {
   transform: translateX(100px) scale(0.95);
-  opacity: 0.6;
-  filter: blur(1.5px) !important;
+  opacity: 0.9;
+  filter: blur(1.6px) !important;
   transition: 0.9s;
   z-index: 1;
 }
@@ -401,9 +659,9 @@ h5{
 
 .card:nth-child(3) {
   transform: translateX(-100px) scale(0.95);
-  filter: blur(1.5px) !important;
+  filter: blur(1.6px) !important;
   transition: 0.9s;
-  opacity: 0.6;
+  opacity: 0.9;
   z-index: 1;
 }
 
@@ -460,6 +718,8 @@ h5{
 .secondcards{
   max-height: 330px !important;
   margin-top: 3rem !important;
+  opacity: 1;
+  
 }
 
 .divider {
@@ -538,9 +798,10 @@ img {
 /* --menu-- */
 
 .blacknav{
-  background-color: #000000 !important;
+  /* background-color: #000000 !important; */
   color: #fff !important;
   padding: 1rem 0rem !important;
+  backdrop-filter: blur(25px) !important;
 }
 
 .nav-link{
@@ -664,7 +925,7 @@ img {
   color: #ccc !important;
   text-align: center;
   margin-top: 10px;
-  margin-bottom: 1opx;
+  margin-bottom: 10px !important;
   margin-bottom: 0px;
   font-weight: 200;
   
@@ -710,6 +971,10 @@ a{
   justify-content: flex-end;
 }
 
+/* -----theme---- */
+.theme-aslogo {
+  content: url('https://wso2.cachefly.net/wso2/sites/all/image_resources/asgardeo-by-wso2-white.webp');
+}
 
 
 
