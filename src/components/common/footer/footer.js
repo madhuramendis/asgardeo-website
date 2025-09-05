@@ -21,7 +21,7 @@ const Footer = () => {
             <Col sm={12} md={12} lg={5}>
             
             
-            <img src="https://wso2.cachefly.net/wso2/sites/all/image_resources/asgardeo-by-wso2-white.webp" alt="Asgardeo Logo" className="ls-is-cached lazyloaded fimgleft" loading="lazy" style={{ height: '38px', width: '140px' }} />
+            <img src="https://wso2.cachefly.net/wso2/sites/all/image_resources/asgardeo-by-wso2-white.webp" alt="Asgardeo Logo" className="ls-is-cached lazyloaded fimgleft theme-aslogo" loading="lazy" style={{ height: '38px', width: '140px' }} />
             
             <p className="footerp">Work together seamlessly with secure your applications with ease.</p>
 

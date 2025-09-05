@@ -1,9 +1,8 @@
+"use client";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-// import ExampleCarouselImage from 'components/ExampleCarouselImage';
 import Layout from '../layouts/LayoutHome';
-// import slider from '../components/slider';
 import Slider from '../components/common/slider/slider';
 import Table from 'react-bootstrap/Table';
 import { useEffect, useState } from 'react';
@@ -11,77 +10,72 @@ import Script from 'next/script';
 import { Modal } from 'react-bootstrap';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import { delay, motion, scale } from "framer-motion";
+import { motion } from "framer-motion";
 import { Button } from 'react-bootstrap';
+
 export default function Home() {
+    const [theme, setTheme] = useState("light");
 
+    useEffect(() => {
+        // Apply theme to <body>
+        document.body.className = theme;
+    }, [theme]);
 
-const [showModal, setShowModal] = useState(false);
-        const [selectedVideoId, setSelectedVideoId] = useState(null);
-        // Array of video objects with ID and title
-        const videos = [
+    const [showModal, setShowModal] = useState(false);
+    const [selectedVideoId, setSelectedVideoId] = useState(null);
+    const videos = [
         {
-        id: 'hte82nUVOZ4',
-                title: 'University of Edinburgh: WSO2 Customer Spotlight',
-                // width: 600,
-                // height: 600,
-                // duration: '3:45'
-                thumbnail: 'https://wso2.cachefly.net/wso2/sites/all/image_resources/university-of-edinburgh-wso2-customer-spotlight.webp',
+            id: 'hte82nUVOZ4',
+            title: 'University of Edinburgh: WSO2 Customer Spotlight',
+            thumbnail: 'https://wso2.cachefly.net/wso2/sites/all/image_resources/university-of-edinburgh-wso2-customer-spotlight.webp',
         },
         {
-        id: 'zdJU606084w',
-                title: 'Linqura: WSO2 Customer Spotlight',
-                // width: 600,
-                // height: 600,
-                // duration: '4:15'
-                thumbnail: 'https://wso2.cachefly.net/wso2/sites/all/image_resources/linqura-wso2-customer-spotlight.webp',
+            id: 'zdJU606084w',
+            title: 'Linqura: WSO2 Customer Spotlight',
+            thumbnail: 'https://wso2.cachefly.net/wso2/sites/all/image_resources/linqura-wso2-customer-spotlight.webp',
         },
-        ];
-        const videos2 = [
+    ];
+
+    const videos2 = [
         {
-        id: '_dxku1x96Yw',
-                title: 'Mastering Choreo: A Comprehensive In-Depth Demo',
-                // width: 600,
-                // height: 600,
-                // duration: '3:45'
-                start: 301
+            id: '_dxku1x96Yw',
+            title: 'Mastering Choreo: A Comprehensive In-Depth Demo',
+            start: 301
         },
-        ];
-        const handleClose = () => {
-setShowModal(false);
+    ];
+
+    const handleClose = () => {
+        setShowModal(false);
         setSelectedVideoId(null);
-};
-        const handleShow = (videoId) => {
-setSelectedVideoId(videoId);
+    };
+
+    const handleShow = (videoId) => {
+        setSelectedVideoId(videoId);
         setShowModal(true);
-};
-        const [activeTab, setActiveTab] = useState('tab1');
-        const [activeTab2, setactiveTab2] = useState('cComp2');
-        const router = useRouter();
-        const { query } = router;
-        let baseIframeUrl = "";
-        const appendQueryParameters = (originalUrl, queryParams) => {
-const url = new URL(originalUrl);
+    };
+
+    const [activeTab, setActiveTab] = useState('tab1');
+    const [activeTab2, setactiveTab2] = useState('cComp2');
+    const router = useRouter();
+    const { query } = router;
+    let baseIframeUrl = "";
+    const appendQueryParameters = (originalUrl, queryParams) => {
+        const url = new URL(originalUrl);
         Object.keys(queryParams).forEach((key) => {
-url.searchParams.append(key, queryParams[key]);
+            url.searchParams.append(key, queryParams[key]);
         });
         return url.toString();
-        };
-        if (Object.keys(query).length > 0) {
-
+    };
+    if (Object.keys(query).length > 0) {
         const baseDestinationUrl = "https://console.choreo.dev/signup_embedded";
-// const baseDestinationUrl = "https://console.st.choreo.dev/signup_embedded";
         baseIframeUrl = appendQueryParameters(baseDestinationUrl, query);
-        
-} else {
-baseIframeUrl = "https://console.choreo.dev/signup_embedded?utm_source=direct&utm_medium=website&utm_campaign=direct";
-// baseIframeUrl = "https://console.st.choreo.dev/signup_embedded?utm_source=direct&utm_medium=website&utm_campaign=direct";
-        }
-return (
-        
-<>
-        <Layout>
+    } else {
+        baseIframeUrl = "https://console.choreo.dev/signup_embedded?utm_source=direct&utm_medium=website&utm_campaign=direct";
+    }
 
+    return (
+        <>
+            <Layout>
 
                 <div className="herosection cGrayBackground">
                         <Container>
@@ -92,7 +86,7 @@ return (
                                                         initial={{ opacity: 0 }} // starting state
                                                         animate={{ opacity: 1 }} // ending state
                                                         transition={{ delay: 0.5, duration: 1.5, ease: "easeInOut" }} // animation settings
-                                                        className="text-4xl font-bold text-white"
+                                                        className="text-4xl font-bold "
                                                 >
                                                         Auth for Modern Apps
                                                 </motion.h1>
@@ -232,6 +226,7 @@ return (
                                                                         <Image
                                                                                 src="https://wso2.cachefly.net/wso2/sites/all/image_resources/asgardeo-icon-v5.webp"
                                                                                 alt="asgardeo icon"
+                                                                                className='theme-minaslogo'
                                                                                 width={30}
                                                                                 height={25} />
                                                                 </motion.div>
@@ -259,6 +254,7 @@ return (
                                                                         transition: { duration: 0.5 }
                                                                 }}
                                                                 className="card secondcards">
+                                                                
                                                                 <motion.div
                                                                         initial={{ rotate: 360 }}
                                                                         animate={{ rotate: 0 }}
@@ -315,7 +311,7 @@ return (
                                                         initial={{ opacity: 0 }} // starting state
                                                         animate={{ opacity: 1 }} // ending state
                                                         transition={{ delay: 0.5, duration: 1.5, ease: "easeInOut" }} // animation settings
-                                                        className="text-4xl font-bold text-white"
+                                                        className="text-4xl font-bold"
                                                 >
                                                         Production-ready identity. Built for your stack
                                                 </motion.h2>
@@ -521,11 +517,12 @@ return (
                                                                 transition={{ delay: 0.2, duration: 0.5, ease: "easeInOut" }}
                                                                 whileHover={{
                                                                         transition: { duration: 0.5 },
+                                                                        scale:1.2,
                                                                         rotate: 10,
                                                                 }}
                                                                 
                                                                 >
-                                                                        <Image src="https://wso2.cachefly.net/wso2/sites/all/image_resources/open-source-initiative.webp" alt="asgardeo icon" width={35} height={35} />
+                                                                        <Image className='cardimgs' src="https://wso2.cachefly.net/wso2/sites/all/image_resources/open-source-initiative.webp" alt="asgardeo icon" width={35} height={35} />
 
                                                                 </motion.div>
 
@@ -559,11 +556,12 @@ return (
                                                                 transition={{ delay: 0.2, duration: 0.5, ease: "easeInOut" }}
                                                                 whileHover={{
                                                                         transition: { duration: 0.5 },
+                                                                        scale:1.2,
                                                                         rotate: 10,
                                                                 }}
                                                                 
                                                                 >
-                                                                        <Image src="https://wso2.cachefly.net/wso2/sites/all/image_resources/scale-svgrepo.webp" alt="asgardeo icon" width={35} height={35} />
+                                                                        <Image className='cardimgs' src="https://wso2.cachefly.net/wso2/sites/all/image_resources/scale-svgrepo.webp" alt="asgardeo icon" width={35} height={35} />
 
                                                                 </motion.div>
 
@@ -599,11 +597,12 @@ return (
                                                                 transition={{ delay: 0.2, duration: 0.5, ease: "easeInOut" }}
                                                                 whileHover={{
                                                                         transition: { duration: 0.5 },
+                                                                        scale:1.2,
                                                                         rotate: 10,
                                                                 }}
                                                                 
                                                                 >
-                                                                        <Image src="https://wso2.cachefly.net/wso2/sites/all/image_resources/open-svgrepo.webp" alt="asgardeo icon" width={35} height={35} />
+                                                                        <Image className='cardimgs' src="https://wso2.cachefly.net/wso2/sites/all/image_resources/open-svgrepo.webp" alt="asgardeo icon" width={35} height={35} />
 
                                                                 </motion.div>
 
@@ -625,6 +624,9 @@ return (
                                                         transition={{ delay: 1.5, duration: 1.5, ease: "easeInOut" }}
                                                         whileHover={{
                                                                 transition: { duration: 0.5 },
+                                                                
+                                                                
+                                                                
                                                                
                                                                 
                                                         }}
@@ -640,12 +642,14 @@ return (
                                                                 transition={{ delay: 0.2, duration: 0.5, ease: "easeInOut" }}
                                                                 whileHover={{
                                                                         transition: { duration: 0.5 },
+                                                                        scale:1.2,
                                                                         rotate: 10,
+                                                                        
                                                                 }}
                                                                 
                                                                 >
                                                                 
-                                                                        <Image src="https://wso2.cachefly.net/wso2/sites/all/image_resources/trust-wallet-svgrepo.webp" alt="asgardeo icon" width={35} height={35} />
+                                                                        <Image className='cardimgs ' src="https://wso2.cachefly.net/wso2/sites/all/image_resources/trust-wallet-svgrepo.webp" alt="asgardeo icon" width={35} height={35} />
 
                                                                 </motion.div>
 
@@ -660,8 +664,8 @@ return (
                         </Container>
 
                 </div>
-        
-        </Layout>
+
+            </Layout>
         </>
-)
+    );
 }
